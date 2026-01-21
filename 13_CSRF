@@ -40,7 +40,18 @@ Share the file with the victim
 👉 Boom! The action executes automatically
 
 
-                                                                                            CVSS Score
+
+Tool :
+pip install xsrfprobe
+python3 setup.py install
+xsrfprobe -u http://testphp.vulnweb.com/artists.php?artist=1
+
+
+
+                                                                                         
+ 
+                                                                                           CVSS Score
+
 
 CVSS v3.x: 6.5 – 8.0
 Severity: P1
