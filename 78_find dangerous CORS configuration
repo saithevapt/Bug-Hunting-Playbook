@@ -1,0 +1,19 @@
+CORSY scans a target website to find dangerous CORS configurations such as: Access-Control-Allow-Origin: * with credentials
+                                                                            Reflected origins (any domain you send is allowed)
+                                                                            Overly permissive subdomain trust
+                                                                            Insecure wildcard patterns
+
+
+These issues can allow data theft, account takeover, or token leakage via malicious websites.
+
+
+Installation :
+git clone https://github.com/s0md3v/Corsy.git
+cd Corsy
+python3 -m venv sai
+source sai/bin/activate                                                  
+pip3 install -r requirements.txt
+deactivate
+
+
+Usage : python3 corsy.py -u https://example.com
