@@ -1,0 +1,71 @@
+CRLF Injection occurs when an application fails to properly sanitize user input before including it in HTTP response headers.
+By injecting Carriage Return (CR – \r) and Line Feed (LF – \n) characters, an attacker can manipulate the HTTP response, leading to HTTP Response Splitting and related attacks.
+
+1.pip3 install crlfsuite 
+crlfsuite -t http://dishtv.in/
+
+2.git clone https://github.com/dwisiswant0/crlfuzz
+cd crlfuzz/cmd/crlfuzz
+go build .
+mv crlfuzz /usr/local/bin
+crlfuzz -u "http://dishtv.in"
+
+3.git clone https://github.com/MichaelStott/CRLF-Injection-Scanner.git
+  cd CRLF-Injection-Scanner
+  chmod 777 *
+  python3 setup.py install 
+  crlf scan -u "www.google.com"
+
+
+4.git clone https://github.com/dubs3c/Injectus.git
+cd Injectus
+ chmod 777 *
+  python3 Injectus.py  -u https://dishtv.in/
+
+
+
+                                                                                            Impact
+
+
+
+If exploitable, CRLF Injection can allow an attacker to : Inject arbitrary HTTP headers
+                                                         Set or overwrite cookies
+                                                         Perform HTTP Response Splitting
+                                                         Conduct Web Cache Poisoning
+                                                        Chain with Open Redirect or Reflected XSS
+                                                        Bypass certain security controls
+                                                        Impact downstream users via shared caches / proxies
+
+
+
+            
+                                                                                   CVSS v3.1 Score
+
+Base Score: 6.1 – Medium 
+
+
+
+
+
+                                                                                    Remediation
+
+
+
+✅ Input Validation & Encoding
+Strip or encode CR (\r) and LF (\n) characters
+Reject URL-encoded variants: %0d %0a %0D %0A %250d %250a
+
+
+✅ Secure Header Handling
+Never construct response headers using user-controlled input
+Use safe framework APIs for redirects and headers
+
+✅ Server & Framework Hardening
+Enable strict RFC-compliant header parsing
+Upgrade web frameworks & servers
+Disable unsafe legacy behavior
+
+✅ Security Controls
+Apply WAF rules to block CRLF payloads
+Implement Content Security Policy (CSP)
+Prevent caching of sensitive responses: Cache-Control: no-store
