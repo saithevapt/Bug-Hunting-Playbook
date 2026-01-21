@@ -8,7 +8,7 @@ These issues can allow data theft, account takeover, or token leakage via malici
 
 
 Installation :
-git clone https://github.com/s0md3v/Corsy.git
+1.git clone https://github.com/s0md3v/Corsy.git
 cd Corsy
 python3 -m venv sai
 source sai/bin/activate                                                  
@@ -17,3 +17,10 @@ deactivate
 
 
 Usage : python3 corsy.py -u https://example.com
+
+
+
+
+2.git clone https://github.com/RUB-NDS/CORStest.git 
+cd CORStest
+python3 corstest.py file.txt
