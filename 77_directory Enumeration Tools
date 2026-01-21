@@ -1,0 +1,13 @@
+dirb https://dishtv.in
+
+
+go install github.com/OJ/gobuster/v3@latest
+gobuster dir -u https://192.168.1.135 -w /path/to/wordlist.txt
+
+
+sudo apt install -y feroxbuster
+feroxbuster -u dishtv.in
+
+
+sudo apt-get install dirsearch
+dirsearch -u dishtv.in
