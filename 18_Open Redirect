@@ -8,9 +8,17 @@ url, redirect, redirect_uri, redirect_url, redirect_to, redir, rurl, destination
 
 
                                                                                           
-                                                                                             Testing Example
+                                                                                               Testing
+
+
 
 https://example.com/login?redirect=https://evil.com
+
+
+git clone https://github.com/Naategh/dom-red.git
+cd dom-red && pip install -r requirements.txt
+python2 dom-red.py -d file.txt  -p /root/dom-red/payloads.list
+
 
 
                              
