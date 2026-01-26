@@ -1,0 +1,79 @@
+HTTP Header Injection is a web security vulnerability where an attacker injects malicious HTTP headers into a server’s response by exploiting improper input validation.
+It usually happens when user input is directly included in HTTP response headers without proper sanitization
+
+
+
+Tool : https://github.com/mlcsec/headi
+
+
+
+
+                                                                  CVSS v3.1 Base Score: 6.1 – 8.6 (Medium to High)
+
+
+
+
+                                                                                           Impact
+
+
+
+1️⃣ Security Impact
+Inject or modify HTTP headers
+Set malicious cookies
+Bypass security headers (CSP, HSTS)
+Enable HTTP Response Splitting
+Lead to XSS attacks
+Cache poisoning (CDN / proxy)
+
+2️⃣ Business Impact
+Session hijacking
+User account compromise
+Data leakage
+Brand reputation damage
+Regulatory risk (GDPR / ISO)
+
+3️⃣ Technical Impact
+Broken application logic
+Trust boundary violation
+Weakens defense-in-depth
+
+
+
+
+
+                                                                                         Remediation
+
+
+
+✅ Input Validation (Primary Fix)
+Reject or encode: \r (CR) , \n (LF)
+Use allowlists instead of blocklists
+
+
+✅ Output Encoding
+Encode user input before using in headers
+Use framework-provided encoding functions
+
+
+✅ Secure Framework Usage
+Avoid manual header construction
+Use safe APIs: response.sendRedirect()
+               res.setHeader() with validation
+
+
+✅ Web Server Hardening
+Enable strict HTTP header parsing
+Disable ambiguous header handling
+
+
+✅ Security Headers
+Add: X-Content-Type-Options: nosniff
+    Content-Security-Policy
+     Strict-Transport-Security
+(Not a fix, but reduces impact)
+
+
+✅ Testing & Monitoring
+Add automated security tests
+Monitor logs for %0d%0a patterns
+Use WAF rules for CRLF injection
