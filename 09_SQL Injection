@@ -289,6 +289,10 @@ Usage:python3 lostsec.py -u "http://testphp.vulnweb.com/artists.php?artist=1" -p
 
 
 
+Tool 2:https://github.com/mhaskar/Blinder
+
+
+
                                                                                
                                                                                     CVSS Scores for SQL Injection
 
