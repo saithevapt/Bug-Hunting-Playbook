@@ -11,3 +11,8 @@ feroxbuster -u dishtv.in
 
 sudo apt-get install dirsearch
 dirsearch -u dishtv.in
+
+
+
+pip install xnLinkFinder
+xnLinkFinder -i target.com -sf target.com
