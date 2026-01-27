@@ -8,6 +8,9 @@ wpscan --url https://yourwebsite.com -e vt --api-token YOUR_TOKEN
 -e vt → Vulnerable themes only
 
 
+Tool 2 : git clone https://github.com/Dionach/CMSmap
+
+
                                                                                     
                                                                                          API Token
                                                                                        
