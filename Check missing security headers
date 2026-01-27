@@ -1,0 +1,5 @@
+* which security headers are enabled on certain websites.
+
+git clone https://github.com/santoru/shcheck.git
+cd shcheck 
+python shcheck.py https://www.frontlinesedutech.com/
