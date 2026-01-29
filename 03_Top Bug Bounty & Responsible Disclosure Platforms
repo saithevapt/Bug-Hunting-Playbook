@@ -11,7 +11,9 @@
     10. https://yogosha.com/
 
 
-#Google dorks for vdp find’s
+#Google dorks for vdp find’s : https://github.com/sushiwushi/bug-bounty-dorks/blob/master/dorks.txt
+
+responsible disclosure hall of fame
 inurl /bug bounty
 inurl: / security
 inurl:security.txt
@@ -23,4 +25,4 @@ inurl: / responsible-disclosure/ bounty
 inurl:'/responsible disclosure' hoodie
 responsible disclosure swag r=h:com
 responsible disclosure hall of fame
-inurl: responsible disclosure $50
+inurl: responsible disclosure $50 etc...
