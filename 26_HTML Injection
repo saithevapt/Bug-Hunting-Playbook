@@ -57,6 +57,19 @@ Referral / Coupon Fields etc...
 
 
 
+                                                                                      fake login script
+
+
+Username:<br>
+<input type="text" name="firstname">
+<br>
+Password:<br>
+<input type="password" name="lastname">
+
+Encoded Script : &#85;&#115;&#101;&#114;&#110;&#97;&#109;&#101;&#58;&#60;&#98;&#114;&#62;&#10;&#60;&#105;&#110;&#112;&#117;&#116;&#32;&#116;&#121;&#112;&
+
+
+
 
 
                                                                                            CVSS Score
