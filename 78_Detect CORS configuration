@@ -24,3 +24,6 @@ Usage : python3 corsy.py -u https://press.priceline.com/wp-json/wp/v2/users
 2.git clone https://github.com/RUB-NDS/CORStest.git 
 cd CORStest
 python3 corstest.py file.txt
+
+
+NOTE : Test Every Web Page
