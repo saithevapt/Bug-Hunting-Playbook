@@ -199,9 +199,19 @@ Where you can inject at :
 •	Any input field on the website.
 
 
+ 
+                                                  
+                                                        XSS Paylods : https://github.com/devspidr/XSS_payloads_list
 
-                                                                                    CVSS
-   
+
+
+                                                                                  
+ 
+                                                                                      CVSS
+
+
+
+
     XSS Type	CVSS Score Priority
     
 Reflected XSS	             6.1	P3 (Medium)
@@ -210,7 +220,7 @@ Blind XSS	                 8.0 – 9.0	P1 (Critical)
 DOM-Based XSS	             6.1 – 7.5	P3 (Medium)
                                                                                    
 
-                                                                            ]
+                                                                            
                                                                                       Impact
 
 🔴 Reflected XSS — Impact
