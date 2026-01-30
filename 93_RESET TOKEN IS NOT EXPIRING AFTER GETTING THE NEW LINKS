@@ -1,0 +1,4 @@
+- Register email 
+- Do password reset
+- Dont open any link after 2 minuts again do password reset and after 2 minutes again do same thing
+- If the first link is still working then there is a vuln
