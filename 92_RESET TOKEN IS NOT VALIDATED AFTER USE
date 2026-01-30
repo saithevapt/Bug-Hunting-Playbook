@@ -1,0 +1,6 @@
+- Register email 
+- Do password reset
+- Now open the link
+- Change the password 
+- Again visit same link in new tab
+- If the link is working and you able to successfully change the password from that link there is a vuln
