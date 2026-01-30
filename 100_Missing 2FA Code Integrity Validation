@@ -1,0 +1,2 @@
+1. Request a 2FA code from Attacker Account.
+2. Use this valid 2FA code in the victim 2FA  Request and see if it bypass the 2FA Protection.
