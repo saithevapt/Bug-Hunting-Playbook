@@ -1,0 +1,7 @@
+- Go to profile 
+- Update anything and intercept the request
+- Send it to repeater
+- Now logout
+- Go to repeater back update any data
+- Then again login
+- If information is updated there is a vulnerability
