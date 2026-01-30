@@ -8,6 +8,12 @@ Execution: bash 403-bypass.sh -u "https://target.com/admin" --exploit
 
 
 
+Other Tools :https://github.com/iamj0ker/bypass-403
+             https://github.com/channyein1337/403-bypass/blob/main/403-bypass.py
+             https://github.com/nico989/B1pass3r
+
+
+
                                                                                  
                                                                                            Change Host header
 
