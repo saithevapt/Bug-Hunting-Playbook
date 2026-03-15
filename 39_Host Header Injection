@@ -43,6 +43,13 @@ Referer:bing.com
 4.Confirm the Vulnerability
 Search the response for the injected keyword (e.g., bing). If it appears, the application is vulnerable.
 
+
+
+#go install github.com/mlcsec/headi@latest
+#sudo mv go/bin/headi /usr/local/bin
+headi -u URL
+
+
  
  
                                                              
