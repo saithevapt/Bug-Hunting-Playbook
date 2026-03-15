@@ -1,3 +1,8 @@
 If the OTP is 6 digits, an attacker may try common or predictable values such as: 000000
                                                                                   123456
                                                                                   111111
+                                                                                   2222
+                                                                                   3333
+                                                                                   4444
+                                                                                    5555
+
