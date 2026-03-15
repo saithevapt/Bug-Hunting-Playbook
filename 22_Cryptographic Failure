@@ -8,6 +8,7 @@ Weak or insecure SSL/TLS algorithms can expose encrypted communication to attack
 
 Sslscan webbingprotechnologies.com
 https://www.ssllabs.com/ssltest/analyze.html?d=eduplus.com&latest
+https://pentesthint.com/vapt-tools/tls-weak-cipher-analyzer/
 
 
 The testssl.sh tool was downloaded using: git clone https://github.com/testssl/testssl.sh.git
