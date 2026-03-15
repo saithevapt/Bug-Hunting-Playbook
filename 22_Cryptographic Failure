@@ -5,6 +5,11 @@ Weak or insecure SSL/TLS algorithms can expose encrypted communication to attack
                                                                                            Tool Setup & Usage
 
 
+
+Sslscan webbingprotechnologies.com
+https://www.ssllabs.com/ssltest/analyze.html?d=eduplus.com&latest
+
+
 The testssl.sh tool was downloaded using: git clone https://github.com/testssl/testssl.sh.git
 
 Execute permission was given to the script: nchmod +x testssl.sh
@@ -45,3 +50,5 @@ Remove weak cipher suites: RC4, DES, 3DES, MD5
 Use strong encryption: AES-GCM, ChaCha20-Poly1305
 Ensure certificates use SHA-256 or stronger
 Regularly audit SSL/TLS settings using security tools
+
+NOTE :we need to verify the following information: certificate validity (Valid Until), who issued the certificate, encryption key length, and the certificate signing algorithm. Weak algorithms and cryptographic vulnerabilities can also be identified using tools like testssl, which can detect issues such as Heartbleed, SWEET32, and other weak cipher vulnerabilities.
