@@ -91,6 +91,7 @@ Reject state changes via GET
 Validate trusted origins
 
 
+NOTE: CSRF on 2FA Disabling
 
 
 
