@@ -11,6 +11,9 @@ wpscan --url https://yourwebsite.com -e vt --api-token YOUR_TOKEN
 Tool 2 : git clone https://github.com/Dionach/CMSmap
 
 
+/wp-admin/install.php > Create admin account → full site takeover
+
+
                                                                                     
                                                                                          API Token
                                                                                        
