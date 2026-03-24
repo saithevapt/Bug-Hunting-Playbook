@@ -15,3 +15,16 @@ amass enum -d domainname
 
 #sudo apt install subfinder
 Subfinder -d domainname -o filename
+
+#assetfinder --subs-only example.com
+
+#findomain -t example.com 
+
+#curl -s "https://crt.sh/?q=%.example.com&output=json" | jq -r '.[].name_value' | grep -Po '(\w+\.\w+\.\w+)$' > crtsh.txt
+
+#curl -s "http://web.archive.org/cdx/search/cdx?url=*.example.com/*&output=text&fl=original&collapse=urlkey" \
+| sort | sed -e 's_https\?://__' -e 's/\/.*//' -e 's/:.*//' -e 's/^www\.//' \
+| sort -u > wayback.txt
+
+
+#
