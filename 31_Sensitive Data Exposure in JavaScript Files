@@ -48,7 +48,39 @@ python3 SecretFinder.py -i javaurl
 #mantra
 go install github.com/Brosck/mantra@latest
 sudo cp ~/go/bin/mantra /bin/
-cat javaurl | mantra      
+cat javaurl | mantra    
+
+
+#24 Javascript path files used to store sensitive information in Web Application
+
+1.  /js/config.js
+2.  /js/credentials.js
+3.  /js/secrets.js
+4.  /js/keys.js
+5.  /js/password.js
+6.  /js/api_keys.js
+7.  /js/auth_tokens.js
+8.  /js/access_tokens.js
+9.  /js/sessions.js
+10. /js/authorization.js
+11. /js/encryption.js
+12. /js/certificates.js
+13. /js/ssl_keys.js
+14. /js/passphrases.js
+15. /js/policies.js
+16. /js/permissions.js
+17. /js/privileges.js
+18. /js/hashes.js
+19. /js/salts.js
+20. /js/nonces.js
+21. /js/signatures.js
+22. /js/digests.js
+23. /js/tokens.js
+24. /js/cookies.js
+
+
+#We can add the words which we think they are sensitive
+api_key, api-key, apikey, api, access, AccessToken, gmap, gmaps, algolia_api_key, credentials,
 
 
 
