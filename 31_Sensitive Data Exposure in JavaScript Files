@@ -37,6 +37,9 @@ https://github.com/LuffySec/Automation-JS-Recon
 https://github.com/aravind0x7/JS-Snooper
 
 
+#https://github.com/GerbenJavado/LinkFinder
+* Extract URLs from JavaScript files
+
 #Secret finder
 git clone https://github.com/m4ll0k/SecretFinder.git secretfinder
 cd secretfinder
