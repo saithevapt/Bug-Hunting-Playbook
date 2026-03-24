@@ -33,6 +33,10 @@ sudo katana -u target.in -jc | grep js$
 sudo katana -list urls.txt -jc | grep js$
 
 
+https://github.com/LuffySec/Automation-JS-Recon
+https://github.com/aravind0x7/JS-Snooper
+
+
 #Secret finder
 git clone https://github.com/m4ll0k/SecretFinder.git secretfinder
 cd secretfinder
