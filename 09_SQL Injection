@@ -239,6 +239,49 @@ Example columns: username,password, email,fullname
 
 
 
+--level (1 to 5)
+
+This controls how many payloads and injection points sqlmap will test.
+
+Levels explained:
+Level 1 (default)
+→ Basic tests
+→ Tests only common parameters (GET/POST)
+Level 2
+→ Adds HTTP headers (like Cookie)
+Level 3
+→ Tests User-Agent, Referer headers
+Level 4
+→ More payloads, more combinations
+Level 5 (max)
+→ Very aggressive
+→ Tests everything (headers + deep payloads)
+
+
+
+--risk (1 to 3)
+
+This controls how dangerous the payloads are.
+
+Risk levels:
+Risk 1 (default)
+→ Safe payloads
+→ No data damage
+Risk 2
+→ Medium risk
+→ Includes heavy queries (time-based, etc.)
+Risk 3 (max)
+→ High risk ⚠️
+→ May:
+Modify data
+Use OR-based injections
+Cause performance issues
+
+
+--schema in SQLmap is used to enumerate the entire database structure (schema).
+
+
+
 Tool 2 Ghauri:
 
 Installation :
