@@ -1,54 +1,98 @@
-A JWT (JSON Web Token) vulnerability was identified where the application failed to properly validate the JWT signature or used a weak signing algorithm, allowing token tampering and unauthorized access.
+A JWT (JSON Web Token) is a string that contains encoded JSON data, which is digitally signed so it can’t be tampered with.
+Authentication & Authorization Purpose JWT Token wil use
 
 
-                                                                                              
-                                                                                          Testing Methodology
+                                                                                        
+                                                                                           JWT Format (Structure)
 
 
-
-1.A login request containing username and password was intercepted using an interception proxy.
-2.After forwarding the request, the server responded with a JWT token in the:
-3.Authorization header / Cookie / Response body.
-4.The JWT token was copied and decoded using an online JWT decoder (e.g., jwt.io, jwt.one).
-5.The decoded token revealed sensitive claims, including: user_id , email, role
-6.The application did not properly validate the JWT signature or relied on a weak signing algorithm.
-7.The email or user_id value inside the token was modified.
-8.A new token was generated and replaced in the request header.
-9.The modified request was forwarded to the server.
-10The server accepted the tampered JWT and granted access to another user’s account.
+A JWT has 3 parts separated by dots (.): HEADER.PAYLOAD.SIGNATURE
+Example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4ifQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 
 
 
-                                                                                            CVSS
+1️⃣ Header
 
-CVSS v3.x: 8.8 – 9.8
-Severity: High to Critical
-Priority: P1
+Contains:
 
+Algorithm (e.g., HS256)
+Token type (JWT)
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
 
+2️⃣ Payload (Important 🔥)
 
-                                                                                            Impact
+Contains actual data (claims):
 
-If this vulnerability is exploited, an attacker can:
-
-Impersonate other users
-Access sensitive user data
-Escalate privileges (user → admin)
-Bypass authentication and authorization controls
-Take full control of accounts
-
-
-
-                                                                                          Remediation
+{
+  "user": "admin",
+  "role": "admin"
+}
 
 
-Enforce strong JWT signature verification on the server
-Use secure signing algorithms (e.g., RS256, HS256 with strong secret)
-Never accept alg: none
-Do not store sensitive data directly inside JWT claims
-Validate token integrity, expiration, and issuer on every request
-Rotate signing keys regularly
-Implement proper role-based access control (RBAC) on the server side
+3️⃣ Signature
+
+Used to verify integrity:
+
+HMACSHA256(
+  base64UrlEncode(header) + "." + base64UrlEncode(payload),
+  secret
+)
+
+👉 If payload is modified → signature becomes invalid
 
 
 
+
+                                                                                        JWT Signature Bypass
+
+Capture JWT token from request 
+Go to https://www.jwt.io/
+Paste the JWT token
+Modify payload (example: "role":"user" → "role":"admin")
+Copy the modified token
+Paste it back into the request
+Forward the request
+If response is 200 OK and admin access is granted → Vulnerble
+
+
+
+Capture JWT token from request
+Go to https://www.jwt.io/
+Decode the token (Header, Payload, Signature)
+Change header:
+"alg": "HS256" → "alg": "none"
+Modify payload:
+"role": "user" → "role": "admin"
+Remove the signature part completely
+Final token format:
+HEADER.PAYLOAD.
+Paste modified token in request
+Forward the request
+If response is 200 OK and admin access is granted → JWT alg=none vulnerability
+
+
+ 
+                                                                                JWT Weak secret vulnerability
+
+Capture JWT token from request (Authorization: Bearer )
+Go to https://www.jwt.io/ and decode the token (Header, Payload, Signature)
+Identify the algorithm (example: HS256 → uses a secret key)
+Use a tool (like jwt_tool or hashcat) to brute-force the secret key
+Once the correct secret key is found, modify the payload
+(example: "role":"user" → "role":"admin")
+Re-sign the token using the discovered secret key
+Generate a new valid JWT (with correct signature)
+Paste the modified token in the request
+Forward the request
+If response is 200 OK and admin access is granted
+
+
+git clone https://github.com/ticarpi/jwt_tool
+python3 -m pip install -r requirements.txt
+
+
+python3 jwt_tool.py eyJraWQiOiI1MWNmNmM2ZjM0ZODk3LTRiNzItOWY3Yi04NDY2ZWU2YWQ4ZGEiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY5MTA2MzM2Mn0.N26tYizSceMO9fwoo6FDEV3at_AG3LNyZQ7g7XXDsIA  -C -d /usr/share/wordlists/rockyou.txt
+python3 jwt_tool.py eyJraWQiOiI1MWNmNmM2ZjM0ZODk3LTRiNzItOWY3Yi04NDY2ZWU2YWQ4ZGEiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY5MTA2MzM2Mn0.N26tYizSceMO9fwoo6FDEV3at_AG3LNyZQ7g7XXDsIA -T -S hs256 -p "secret1"
