@@ -7,7 +7,7 @@ Clickjacking is a web security vulnerability where an attacker tricks a user int
 Clickjacker.io is an online automatic tool used to check whether a website is vulnerable to Clickjacking.
 
 How to Use :
-Open https://clickjacker.io/
+Open https://clickjacker.io/ or https://clickjacking.m14r41.in/
 Enter the target website URL
 Run the test
 
