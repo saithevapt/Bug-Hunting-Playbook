@@ -221,6 +221,10 @@ Cause performance issues
 --schema in SQLmap is used to enumerate the entire database structure (schema).
 
 
+--banner=version grab
+--current-user=user name
+
+
 
 Tool 2 Ghauri:
 
