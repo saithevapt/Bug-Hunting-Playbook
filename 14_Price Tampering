@@ -42,25 +42,7 @@ If the order is processed at ₹1 instead of ₹100
 ✅ Price Tampering vulnerability confirmed
 
 
-
-                                                                                             CVSS Score
-
-
-CVSS v3.x: 7.5 – 8.6
-Severity: High
-
-
-                                                                                               Impact
-
-
-If exploited, an attacker can:
-🛒 Purchase products at arbitrary prices
-💸 Cause direct financial loss
-🎟️ Obtain premium services for free
-🔁 Automate mass fraudulent purchases
-🧾 Break business logic and accounting
-⚠️ Damage brand trust and compliance
-
+#500-500,0,-500,Quantity:10
 
 
                                                                                            Remediation
