@@ -106,14 +106,6 @@ python ssrfmap.py -r examples/request.txt -p url -m readfiles,portscan
 
 
 
-                                                                                                  CVSS Score
-
-
-CVSS v3.x: 8.0 – 9.8
-Severity:P1/P2
-
-
-
                                                                                                    Impact
 
 If SSRF is exploited, an attacker can:
@@ -126,29 +118,11 @@ If SSRF is exploited, an attacker can:
 
 
                                                                                                    Remediation
-✅ 1. Input Validation & Allowlisting
-Only allow trusted domains
-Block:
-localhost
-Private IP ranges
-Internal DNS names
 
-✅ 2. Network-Level Protections
+
+✅ 1. Network-Level Protections
 Block outbound access to:
 127.0.0.1
 169.254.169.254
 Internal IP ranges
 Use firewall / proxy rules
-
-✅ 3. Disable Unnecessary URL Fetching
-Avoid server-side URL fetch unless required
-
-✅ 4. Use DNS & IP Resolution Checks
-Validate resolved IP, not just hostname
-Prevent DNS rebinding
-
-✅ 5. Logging & Monitoring
-Monitor outbound requests
-Alert on suspicious destinations
-
-
