@@ -16,28 +16,6 @@ https://example.com/login?redirect=https://evil.com
 https://games.crossfit.com/search?query=</title><a href=https://evil.com><h1>click here</h1></a>
 
 
-git clone https://github.com/Naategh/dom-red.git
-cd dom-red && pip install -r requirements.txt
-python2 dom-red.py -d file.txt  -p /root/dom-red/payloads.list
-
-
-
-                             
-                                                                                                  CVSS
-CVSS v3.x: 5.4 – 6.1
-Severity: Medium
-Priority: P3
-
-
-
-                                                                                                 Impact
-
-If an Open Redirect vulnerability exists, an attacker can:
-🎣 Perform phishing attacks using a trusted domain
-🔐 Steal user credentials or session tokens
-🔁 Abuse OAuth / SSO login flows
-🦠 Redirect users to malicious or malware sites
-📉 Damage brand trust and reputation
 
 
 
@@ -50,8 +28,3 @@ If an Open Redirect vulnerability exists, an attacker can:
 🔍 Validate and sanitize redirect parameters
 🧾 Sign or encode redirect values (HMAC/JWT)
 🚫 Reject unknown or external redirect destinations
-
-
-
-                                                                                       
-                                                                                         
