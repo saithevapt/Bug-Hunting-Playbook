@@ -8,7 +8,6 @@ Weak or insecure SSL/TLS algorithms can expose encrypted communication to attack
 
 Sslscan webbingprotechnologies.com
 https://www.ssllabs.com/ssltest/analyze.html?d=eduplus.com&latest
-https://pentesthint.com/vapt-tools/tls-weak-cipher-analyzer/
 
 
 The testssl.sh tool was downloaded using: git clone https://github.com/testssl/testssl.sh.git
@@ -20,13 +19,6 @@ The SSL/TLS scan was performed using: ./testssl.sh nasa.gov
 
 * The tool will display vulnerabilitie if any weak or insecure SSL/TLS algorithms are present.
 
-
-
-                                                                                                CVSS
-
-CVSS v3.x: 5.3 – 7.4
-Severity: Medium
-Priority: P3
 
 
 
