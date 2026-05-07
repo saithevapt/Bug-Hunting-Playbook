@@ -95,20 +95,3 @@ Avoid using Host header to build: URLs
 Prefer hardcoded base URLs in application logic
 Configure reverse proxies correctly (e.g., Nginx, Apache)
 Log and monitor invalid Host header usage
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                                                        
-                                                                                                                        
-
-                                                                                                                        
