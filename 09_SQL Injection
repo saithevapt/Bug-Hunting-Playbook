@@ -276,38 +276,7 @@ chmod +x lostsec.py
 
 Download Payload File:wget https://raw.githubusercontent.com/jahithoque/BSQLi-from-Lostsec/master/payloads/xor.txt -O xor.txt
 
-Usage:python3 lostsec.py -u "http://testphp.vulnweb.com/artists.php?artist=1" -p payloads/xor.txt
-
-
-Tool 2:https://github.com/mhaskar/Blinder
-
-
-
-                                                                               
-                                                                                    CVSS Scores for SQL Injection
-
-Auth bypass SQLi: CVSS 9.8 – P1
-get,post-based SQLi: CVSS 8.2 – P2
-Blind SQLi: CVSS 6.5 – P3
-
-
-
-
-                                                                                        Impact of SQL Injection
-1.Authentication Bypass
-Attackers can log in without valid credentials.
-
-2.Sensitive Data Exposure
-Theft of usernames, passwords, emails, PII, financial data.
-
-3.Privilege Escalation
-Normal users can gain admin-level access.
-
-4.Complete Database Compromise
-Full control over the database contents.
-
-5.Business & Legal Impact
-Data breaches, reputation damage, compliance violations, financial loss.
+Usage:python3 lostsec.py -u "http://testphp.vulnweb.com/artists.php?artist=1" -p xor.txt
 
 
 
@@ -333,11 +302,6 @@ Use generic error messages.
 
 5. Web Application Firewall (WAF)
 Helps detect and block common SQLi payloads.
-
-6. Regular Security Testing
-Perform manual testing and automated scans.
-Use tools like sqlmap, Burp Suite, OWASP ZAP on authorized targets.
-
 
 
 
