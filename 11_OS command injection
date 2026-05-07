@@ -32,31 +32,10 @@ Common Parameters to test : https://1drv.ms/w/c/0929e0a398c9d676/EW1StcgFAPpIs67
 http://example.com/cmd.php?cmd=whoami 
 
 
+                                                                            
 
 
-                                                                                         CVSS & Priority
-
-CVSS v3.x: 9.8 (Critical)
-P1 – Critical ✅
-
-
-
-
-
-                                                                                            Impact
-
-If an OS Command Injection exists, an attacker can:
-
-🚨 Execute arbitrary system commands on the server
-📂 Read, modify, or delete sensitive files (e.g., /etc/passwd, config files)
-🔐 Steal credentials, API keys, and environment secrets
-🐚 Obtain reverse shell / full server takeover (RCE)
-🦠 Install backdoors, malware, or crypto-miners
-❌ Cause Denial of Service (DoS) by killing services or exhausting resources
-🌐 Pivot to internal systems in the network
-
-
-                                                                                           Remediation
+                                                                                            Remediation
 
 
 ✅ 1. Avoid OS Command Execution
@@ -84,8 +63,3 @@ Use AppArmor / SELinux policies
 Enable command execution logging
 Deploy WAF rules to detect command injection patterns
 Monitor for unexpected child processes                                                     
-
-
-
-
-
