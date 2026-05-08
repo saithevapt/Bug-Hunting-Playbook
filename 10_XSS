@@ -74,6 +74,7 @@ o	Comment boxes , search bar’s etc..
 •	If the site is vulnerable, the page will show a popup after update, confirming XSS.
 
 
+#https://xssnow.in/ - Advance payloads
 
 #Encoded
 < ➔ %EF%BC%9C
