@@ -42,7 +42,7 @@ If the order is processed at ₹1 instead of ₹100
 ✅ Price Tampering vulnerability confirmed
 
 
-#500-500,0,-500,Quantity:10
+#500-500,0,0.1,-500,Quantity:10
 
 
                                                                                            Remediation
