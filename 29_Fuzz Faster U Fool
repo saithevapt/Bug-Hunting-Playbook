@@ -6,6 +6,7 @@ ffuf (Fuzz Faster U Fool) is a fast web fuzzing tool used to discover hidden and
 
 
 ffuf -c -u https://FUZZ.dishtv.in -w file.txt -mc 200 -rate 100
+feroxbuster -u https://target.com -w /usr/share/wordlists/dirb/common.txt
 
 
 word lists Files:
