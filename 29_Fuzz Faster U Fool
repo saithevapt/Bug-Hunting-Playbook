@@ -9,6 +9,9 @@ ffuf -c -u https://FUZZ.dishtv.in -w file.txt -mc 200 -rate 100
 
 
 word lists Files:
+https://github.com/jivoi/pentest/blob/master/wordlists/dicc.txt
+https://github.com/six2dez/OneListForAll/blob/main/onelistforallmicro.txt
+https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/Web-Content/common.txt
 https://github.com/theMiddleBlue/DNSenum/tree/master/wordlist
 https://github.com/n0kovo/n0kovo_subdomains
 https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS
