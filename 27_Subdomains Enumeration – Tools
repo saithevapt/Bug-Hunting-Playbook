@@ -20,6 +20,8 @@ Subfinder -d domainname -o filename
 
 #findomain -t example.com 
 
+#https://recox.hackerz.space/
+
 #curl -s "https://crt.sh/?q=%.example.com&output=json" | jq -r '.[].name_value' | grep -Po '(\w+\.\w+\.\w+)$' > crtsh.txt
 
 #curl -s "http://web.archive.org/cdx/search/cdx?url=*.example.com/*&output=text&fl=original&collapse=urlkey" \
