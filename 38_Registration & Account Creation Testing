@@ -11,6 +11,8 @@ Accountt creation like -saijain8520%0d%0a@gmail.com or saijain8520%hackerone.com
 open email verfication like intercept and change email and verfiy the account 
 HTML Injection
 Overwrite existing user , SaiJAIn8520@gmail.com
+FName=<img src=x
+LName=onerror=alert(1)>
 
 
 
