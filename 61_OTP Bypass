@@ -1,4 +1,0 @@
-1.Enter a valid OTP and observe the server response. Pay attention to the response structure, status code, and any success message returned by the server.
-2.Next, enter an invalid OTP during the verification process and intercept the request using Burp Suite.
-3.When the server response is intercepted, modify the ending part of the response so that it looks similar to the response received for a valid OTP (for example, changing the status message or success indicator).
-4.Forward the modified response to the browser.
