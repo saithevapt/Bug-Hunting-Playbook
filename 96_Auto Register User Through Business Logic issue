@@ -1,5 +1,0 @@
-- Create an account
-- Invite a user
-- Invited user reveice a link but didnt open it yet
-- Invited user create a new account without open attacker link
-- When he logged in he see that i am already in attacker group because he invited me and this is a bug
