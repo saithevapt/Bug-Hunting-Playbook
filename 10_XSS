@@ -165,6 +165,7 @@ Steps:
 </script><script>alert(1)</script>.pdf
 </script><script>alert(1)</script>.html
 
+#https://github.com/h6nt3r/file_upload_payloads/tree/main/xss/rxss
 
                                                                                       XSS Testing via HTTP Headers
 
