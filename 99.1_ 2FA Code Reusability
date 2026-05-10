@@ -1,4 +1,0 @@
-1. Request a 2FA code and use it
-2. Now, Re-use the 2FA code and if it is used successfully that's an issue.
-3. Also, try requesting multiple 2FA codes and see if previously requested Codes expire or not when a new code is requested
-4. Also, try to re-use the previously used code after long time duration say 1 day or more. That will be an potential issue as 1 day is enough duration to crack and guess a 6-digit 2FA code.
