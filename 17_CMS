@@ -1,0 +1,16 @@
+#word press
+wpscan --url https://yourwebsite.com -e vp --api-token YOUR_TOKEN
+wpscan --url https://yourwebsite.com -e vt --api-token YOUR_TOKEN
+
+https://target.com/wp-json/wp/v2/users = User name enemurate
+
+
+Tool 2 : git clone https://github.com/Dionach/CMSmap
+
+
+/wp-admin/install.php > Create admin account → full site takeover
+
+
+#joomla
+sudo apt install joomscan
+joomscan -u https://dishtv.in/
