@@ -1,7 +1,0 @@
-site:example.com | site:*.example.com inurl:login | inurl:signin | inurl:auth | intitle:"Login" | intitle:"Sign in" |
-intitle:"Authentication" | intitle:"Login Page" | intitle:"Signin Page" | intitle:"Auth Page" | intitle:"Admin Login" |
-intitle:"User Login" | intitle:"Member Login" | intitle:"Client Login" | intitle:"Staff Login" | intitle:"Employee Login" |
-intitle:"Partner Login" | intitle:"Portal Login" | intitle:"Customer Login" | intitle:"Account Login" | intitle:"Member
-Signin" | intitle:"Client Signin" | intitle:"User Signin" | intitle:"Admin Signin" | intitle:"Employee Signin" |
-intitle:"Staff Signin" | intitle:"Partner Signin" | intitle:"Portal Signin" | intitle:"Customer Signin" | intitle:"Account
-Signin"
