@@ -1,2 +1,8 @@
 Brute Force
 User / Email Enemeration
+
+
+- Goto login page
+- copy the url
+- Paste in incognito mode but change https to http
+- If the website is running on http and https both there will be a vuln
