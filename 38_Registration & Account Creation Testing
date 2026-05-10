@@ -12,3 +12,18 @@ Payload for Email field : “><svg/onload=confirm(1)>”@x.y
 Accountt creation like -saijain8520%0d%0a@gmail.com or saijain8520%hackerone.com
 open email verfication like intercept and change email and verfiy the account 
 
+
+1.Create a new account and log in normally.
+2.Navigate to Account Settings.
+3.Change the email address to any arbitrary email, for example: randomuser123@example.com
+4.Save the changes.
+
+5.Observe that: No verification email is sent
+              No OTP or confirmation is required
+              The email change is accepted immediately
+
+6.Log out.
+7.Attempt to register a new account using: randomuser123@example.com
+8.Observe the error message: "Email already exists"
+
+➡️ This confirms that the email was claimed without ownership verification.
