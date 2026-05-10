@@ -1,5 +1,0 @@
-- Attacker sign up email (Email verification will be sent to victim email).
-- Dont verify your account
-- Update email 
-- If your email is changed successfully there is a vuln
-- Because Without email verification email cant be changed 
