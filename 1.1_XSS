@@ -44,6 +44,7 @@ Example : http://testphp.vulnweb.com/artists.php?artist=<script>alert('XSS')</sc
 •	This is called Reflected xss
 
 
+#https://h6nt3r.github.io/gcg/ = automate using extension
                                                                                                   
                                                                                                    XSS Testing (POST-Based)
 
