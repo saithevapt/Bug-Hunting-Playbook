@@ -1,0 +1,12 @@
+Note session ID before logout
+Login again
+Compare session IDs
+
+
+
+Login Account A 
+Logout
+Login Account B
+compare session id's of Account A & B
+
+Vulnerable if: Same session reused
