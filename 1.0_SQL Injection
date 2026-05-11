@@ -59,6 +59,7 @@ Parameters to Test : id=, pid=, uid=, cid=, rid=, mid=, fid=, tid=, sid=, item=,
 https://anyurl.com/page.php?id=1'
 
 If an SQL error occurs, the parameter may be vulnerable.
+#https://github.com/freelancermijan/esqli = using tool
 
 
 2. Determine the number of columns
