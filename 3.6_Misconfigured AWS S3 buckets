@@ -24,6 +24,11 @@ site:s3.amazonaws.com intitle:"index of" "bucket"
 
 https://buckets.grayhatwarfare.com/
 
+#subfinder -d eduplusnow.com -all -silent | httpx-toolkit -sc -title -td | grep "Amazon S3"
+
+#https://chromewebstore.google.com/detail/s3bucketlist/anngjobjhcbancaaogmlcffohpmcniki
+* S3BucketList is a Chrome browser extension designed to identify and list Amazon S3 buckets encountered during web browsing sessions.
+
 
 
 
@@ -52,36 +57,6 @@ aws s3 ls s3://bucketname --no-sign-request { List Files in a Public S3 Bucket }
 aws s3 cp s3://bucketname/filename /home/saijain --no-sign-request { Download File from Public S3 Bucket }
 
 
-
-                                                                                      CVSS Score
-
-▶ Public Read Access : CVSS v3.1 Base Score: 7.5 – High
-Public Write / Delete Access : CVSS v3.1 Base Score: 9.1 – Critical
-
-
-
-
-
-                                                                                           Impact
-
-If an AWS S3 bucket is misconfigured, an attacker can:
-Download sensitive data (PII, backups, logs)
-Access source code or credentials
-Upload malicious files
-Delete or modify existing data
-Host phishing or malware content
-Cause financial loss
-Trigger compliance violations
-Damage brand reputation
-
-
-                                                                                       Remediation
-
-
-Enable S3 Block Public Access
-Remove public ACLs and bucket policies
-Revoke exposed object permissions
-Rotate exposed credentials (if any)
 
 
 
