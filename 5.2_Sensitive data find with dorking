@@ -12,6 +12,7 @@ site:jsfiddle. net "example. com"
 site:codebeautify. org "example. com"
 site:codepen. io "example. com"
 
+ext:json api_key
 
 site:example[.]com ext:log | ext:txt | ext:conf | ext:cnf | ext:ini | ext:env | ext:sh | ext:bak | ext:backup | ext:swp | ext:old | ext:~ | ext:git | ext:svn | ext:htpasswd | ext:htaccess | ext:json
 
