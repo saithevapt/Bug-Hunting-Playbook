@@ -46,6 +46,8 @@ HMACSHA256(
 
 
 
+RS256 > HS256 if accpected valid vuln {JWT Token algorithm confusion }
+
                                                                                         JWT Signature Bypass
 
 Capture JWT token from request 
