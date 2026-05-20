@@ -3,3 +3,5 @@ phpinfo.info
 backup.sql
 .git
 https://www.nijophasr.net/lib/pkp/classes/config/Config.inc.php
+templates/processed/config.ini
+backup.tar
