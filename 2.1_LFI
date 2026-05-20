@@ -8,6 +8,7 @@ LFI (Local File Inclusion) is a web vulnerability where an attacker can read or 
 
 https://example.com/index.php?page=about.php
 https://example.com/index.php?page=../../../../etc/passwd
+/et/passwd%00
 
 
 
