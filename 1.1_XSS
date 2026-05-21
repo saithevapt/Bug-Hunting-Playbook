@@ -195,8 +195,7 @@ Installation:
 sudo apt install golang
 su root
 go install github.com/hahwul/dalfox/v2@latest
-cd go
-mv dalfox /usr/bin
+mv ~/go/bin/dalfox /usr/local/bin/
 
 Usage Example: dalfox url http://testphp.vulnweb.com/?artist=
 ✅ Dalfox automatically detects and tests for XSS in the given URL.
