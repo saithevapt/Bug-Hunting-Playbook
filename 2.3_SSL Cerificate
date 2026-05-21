@@ -12,7 +12,7 @@ https://www.ssllabs.com/ssltest/analyze.html?d=eduplus.com&latest
 
 The testssl.sh tool was downloaded using: git clone https://github.com/testssl/testssl.sh.git
 
-Execute permission was given to the script: nchmod +x testssl.sh
+Execute permission was given to the script: chmod +x testssl.sh
 
 The SSL/TLS scan was performed using: ./testssl.sh nasa.gov
 
