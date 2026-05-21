@@ -46,7 +46,7 @@ Search the response for the injected keyword (e.g., bing). If it appears, the ap
 
 
 #go install github.com/mlcsec/headi@latest
-#sudo mv go/bin/headi /usr/local/bin
+#sudo mv ~/go/bin/headi /usr/local/bin
 headi -u URL
 
 
