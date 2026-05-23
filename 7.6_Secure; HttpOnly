@@ -1,0 +1,8 @@
+#Set-Cookie: sessionid=abc123; Secure; HttpOnly
+
+* `Secure` → Cookie is sent only over HTTPS connections.
+  Example: Sent on `https://example.com`, not on `http://example.com`.
+
+* `HttpOnly` → JavaScript cannot access the cookie.
+  Example: `document.cookie` cannot read the session cookie.
+
