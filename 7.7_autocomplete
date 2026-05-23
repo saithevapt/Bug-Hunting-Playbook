@@ -1,0 +1,21 @@
+Autocomplete should be properly configured on all input fields.
+
+* `autocomplete="on"` → Browser stores and auto-fills user data.
+* `autocomplete="off"` → Browser does not auto-fill/store data.
+
+We need to check all input fields, especially:
+
+* Login forms
+* Password fields
+* OTP fields
+* Credit card fields
+* Personal information fields
+
+Example:
+
+```html id="i26ylp"
+<input type="password" autocomplete="off">
+```
+
+Risk:
+Sensitive information may be stored or auto-filled in shared/public systems if autocomplete is enabled improperly.
