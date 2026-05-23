@@ -1,0 +1,10 @@
+The application allows unlimited manual login attempts with incorrect passwords without temporarily locking the account.
+
+### Risk
+
+* Brute-force attacks
+* Unauthorized access
+
+### Example
+
+Manually entering multiple incorrect passwords for the same account does not trigger account lockout or restriction.
