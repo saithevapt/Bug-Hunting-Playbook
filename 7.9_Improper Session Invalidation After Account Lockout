@@ -1,0 +1,11 @@
+#The application locks the account after multiple failed login attempts, but previously issued session cookies remain valid and still provide access to the account.
+
+### Risk
+
+* Bypass of account lockout protection
+* Unauthorized account access
+* Session hijacking risk
+
+### Example
+
+After triggering account lockout through multiple failed login attempts, replacing the browser cookie with an old valid session cookie still grants access to the user account.
