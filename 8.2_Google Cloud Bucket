@@ -1,0 +1,14 @@
+Download Google Cloud SDK: curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
+                          tar -xf google-cloud-cli-linux-x86_64.tar.gz
+                          ./google-cloud-sdk/install.sh
+
+
+If using zsh: echo 'export PATH=$PATH:$HOME/google-cloud-sdk/bin' >> ~/.zshrc
+               source ~/.zshrc
+
+
+gsutil ls gs://BUCKET_NAME
+gsutil cp gs://BUCKET_NAME/file.txt .
+gsutil -m cp -r gs://BUCKET_NAME .
+gsutil iam get gs://BUCKET_NAME
+gsutil cp test.txt gs://BUCKET_NAME/
