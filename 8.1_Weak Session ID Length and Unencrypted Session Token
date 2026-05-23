@@ -1,0 +1,11 @@
+# The application uses a short session ID length and the session token appears to be unencrypted or predictable.
+
+### Risk
+
+* Session hijacking
+* Session prediction attacks
+* Unauthorized access
+
+### Example
+
+The application generates session IDs with insufficient length/entropy, making them easier to guess or brute-force. The session token is also not properly encrypted or protected.
