@@ -71,5 +71,11 @@ I logged into the account and navigated to Account Settings.
 There was an option to add a secondary email address.
 I added an email address that I control and completed its verification.
 After verification, the application allowed me to mark the secondary email as the primary email.
+
+
+
+
+
+#Signup → don't verify → password reset → does it verify account automatically?
 Once I did that, I noticed something unexpected:
 The original email address (used during signup) was now automatically marked as verified
