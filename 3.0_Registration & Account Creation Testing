@@ -79,3 +79,19 @@ After verification, the application allowed me to mark the secondary email as th
 #Signup → don't verify → password reset → does it verify account automatically?
 Once I did that, I noticed something unexpected:
 The original email address (used during signup) was now automatically marked as verified
+
+
+
+
+
+
+                                             **Improper Username Deletion Handling / Username Reuse Issue**
+
+### Steps to Reproduce
+
+1. Register a new account and note the username
+2. Verify and activate the account
+3. Delete the account
+4. Attempt to register again using the same username
+5. Observe whether the application improperly handles the deleted username state
+
