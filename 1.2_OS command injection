@@ -26,16 +26,28 @@ Common Parameters to test : https://1drv.ms/w/c/0929e0a398c9d676/EW1StcgFAPpIs67
 
 
                                                                                           
-                                                                                           Steps to reproduce
+                                                            Steps to reproduce
 
 
 http://example.com/cmd.php?cmd=whoami 
 
 
-                                                                            
+
+                                                    #Command Injection via Filename Parameter**
+
+### Steps to Reproduce
+
+1. Navigate to the file upload or vulnerable input functionality
+2. Intercept the request using Burp Suite
+3. Modify the `filename` parameter with a command injection payload:
+filename="t';id;echo 'DarkShadow_'"
+4. Forward the request to the server
 
 
-                                                                                            Remediation
+                                                                    
+
+
+                                                            Remediation
 
 
 ✅ 1. Avoid OS Command Execution
