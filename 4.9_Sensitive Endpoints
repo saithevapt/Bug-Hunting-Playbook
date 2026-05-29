@@ -5,3 +5,4 @@ backup.sql
 https://www.nijophasr.net/lib/pkp/classes/config/Config.inc.php
 templates/processed/config.ini
 backup.tar
+session_start.inc.php
