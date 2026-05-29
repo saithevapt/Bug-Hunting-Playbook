@@ -96,6 +96,9 @@ http://127.0.0.1/d
                                                                                               Automatic Tool
 
 
+https://pingback.sh/
+
+
 git clone https://github.com/swisskyrepo/SSRFmap
 $ cd SSRFmap/
 $ pip3 install -r requirements.txt
