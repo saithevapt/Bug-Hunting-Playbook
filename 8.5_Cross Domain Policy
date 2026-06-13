@@ -1,0 +1,8 @@
+Cross-Domain Policy (crossdomain.xml) is a configuration file used by Adobe Flash/Flex applications to define which external domains are permitted to access resources hosted on a server.
+
+
+Safe Rule:
+<allow-access-from domain="app.example.com" secure="true"/>
+
+Overly Permissive Rule:
+<allow-access-from domain="*" to-ports="*" secure="false"/>
