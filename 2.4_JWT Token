@@ -98,3 +98,9 @@ python3 -m pip install -r requirements.txt
 
 python3 jwt_tool.py eyJraWQiOiI1MWNmNmM2ZjM0ZODk3LTRiNzItOWY3Yi04NDY2ZWU2YWQ4ZGEiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY5MTA2MzM2Mn0.N26tYizSceMO9fwoo6FDEV3at_AG3LNyZQ7g7XXDsIA  -C -d /usr/share/wordlists/rockyou.txt
 python3 jwt_tool.py eyJraWQiOiI1MWNmNmM2ZjM0ZODk3LTRiNzItOWY3Yi04NDY2ZWU2YWQ4ZGEiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY5MTA2MzM2Mn0.N26tYizSceMO9fwoo6FDEV3at_AG3LNyZQ7g7XXDsIA -T -S hs256 -p "secret1"
+
+
+https://github.com/brendan-rius/c-jwt-cracker
+https://github.com/AresS31/jwtcat
+https://github.com/lmammino/jwt-cracker
+https://github.com/mazen160/jwt-pwn
