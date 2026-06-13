@@ -1,0 +1,13 @@
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ASPX Execution Test</title>
+</head>
+<body>
+    <h2>ASPX Executed Successfully</h2>
+    <p>Server Time: <%= DateTime.Now %></p>
+    <p>Machine Name: <%= Environment.MachineName %></p>
+</body>
+</html>
