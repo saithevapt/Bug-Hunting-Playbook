@@ -1,0 +1,100 @@
+## ClientAccessPolicy.xml (Legacy Silverlight Cross-Domain Policy)
+
+### Description
+
+`clientaccesspolicy.xml` is a legacy XML file used by Microsoft Silverlight to control whether applications hosted on one domain can access resources on another domain. The file is typically located at:
+
+```text
+https://example.com/clientaccesspolicy.xml
+```
+
+Although Silverlight is now deprecated, some legacy applications still expose this file. If it is overly permissive, it may allow unauthorized cross-domain access.
+
+---
+
+## Dangerous Configuration Example
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<access-policy>
+  <cross-domain-access>
+    <policy>
+      <allow-from http-request-headers="*">
+        <domain uri="*"/>
+      </allow-from>
+      <grant-to>
+        <resource path="/" include-subpaths="true"/>
+      </grant-to>
+    </policy>
+  </cross-domain-access>
+</access-policy>
+```
+
+---
+
+## Why is this dangerous?
+
+### 1. `<domain uri="*"/>`
+
+* Allows **any domain** on the Internet to access the application.
+
+Example:
+
+* `https://evil.com`
+* `https://attacker.com`
+* `https://randomsite.com`
+
+All are trusted.
+
+---
+
+### 2. `http-request-headers="*"`
+
+Allows clients to send **any HTTP headers**, including:
+
+```
+Authorization
+Cookie
+Content-Type
+X-API-Key
+Custom Headers
+```
+
+This gives unnecessary flexibility to untrusted domains.
+
+---
+
+### 3. `path="/"`
+
+Grants access starting from the website root.
+
+Example:
+
+```
+/
+/api/
+/admin/
+/users/
+/files/
+```
+
+---
+
+### 4. `include-subpaths="true"`
+
+Allows access to every subdirectory under the root.
+
+Example:
+
+```
+/
+/api/
+/api/v1/
+/admin/
+/uploads/
+/private/
+```
+
+Everything becomes accessible if Silverlight is used.
+
+
