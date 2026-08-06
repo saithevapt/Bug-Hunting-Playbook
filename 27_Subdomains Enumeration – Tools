@@ -32,4 +32,5 @@ Subfinder -d domainname -o filename
 | sort -u > wayback.txt
 
 
-#
+#https://ctl.shodan.io/api/v1/domain/facebook.com/hostnames
+
