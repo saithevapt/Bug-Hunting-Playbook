@@ -23,7 +23,7 @@ cd Injectus
   python3 Injectus.py  -u https://dishtv.in/
 
 
-    
+curl -X GET "https://vaeto.in/%0Acrlfi:sai" -i -k
                                                                                            Payloads
 
 
